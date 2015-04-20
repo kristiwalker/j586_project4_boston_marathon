@@ -1,5 +1,12 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/twitter.css">
+<script src="js/tweetLinkit.js"></script>
 
+<script>
+    function pageComplete(){
+    $('.tweet').tweetLinkify();
+    }
+</script>
 
 <?php
 ini_set('display_errors', 1);
@@ -28,14 +35,17 @@ $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield) 
             ->buildOauth($url, $requestMethod)
             ->performRequest(),$assoc = TRUE);
-
+       
+            
 foreach($string['statuses'] as $items)
     {
-        echo "<div class='profile-image'>" . "<img src='", $items['user']['profile_image_url'], "'>" . "</div>" .
-        "<div class='name'>" . $items['user']['name']  . "</div>" . "<br/>" .
-         "@" . $items['user']['screen_name'] . "</div>" . "<br/>";
-        echo "When: " . $items['created_at'] . "<br />";
-        echo "Tweet: " . $items['text'] . "<br/>";
-        echo "<hr/>";
+        echo "<div class='row twitter'>";
+        echo "<div class='profile-image'>" . "<img src='", $items['user']['profile_image_url'], "'>" . "</div>" . "<br/>";
+        echo "<div class='name'>" . $items['user']['name']  . "</div>" . "<br/>";
+        echo "<div class='handle'>" . "@" . $items['user']['screen_name'] . "</div>" . "<br/>";
+        echo "<div class='when'>" . $items['created_at'] . "<br />";
+        echo "<div class='tweet'>" . $items['text'] . "<br/>";
     }
+        echo "<script>pageComplete();</script>;"
+?>
 
