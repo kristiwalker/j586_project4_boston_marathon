@@ -1,13 +1,19 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/twitter.css">
-<script src="js/tweetLinkit.js"></script>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/twitter.css">
+        <script src="js/tweetLinkit.js"></script>
+        
+        <script>
+            function pageComplete(){
+            $('.tweet').tweetLinkify();
+            }
+        </script>
+   </head> 
 
-<script>
-    function pageComplete(){
-    $('.tweet').tweetLinkify();
-    }
-</script>
 
+<body>
 <?php
 ini_set('display_errors', 1);
 require_once('TwitterAPIExchange.php');
@@ -48,4 +54,5 @@ foreach($string['statuses'] as $items)
     }
         echo "<script>pageComplete();</script>;"
 ?>
-
+</body>
+</html>

@@ -9,7 +9,6 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,28 +17,38 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
-    
-    
+    <link href="css/styles.css" rel="stylesheet">
+        
   </head>
   <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 header">
-                Hello
+                <h1>KEEPING UP<span style ="padding-left:200px;">WITH BOSTON </h1></span>
+                <h2>The social status of Marathon Monday</h2>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <div id="map-canvas"></div>
+            <div class="col-xs-6 map">
+                <iframe src="http://walkerkd.webfactional.com/j586-project-4/map/marathon-map.html" style="border:0px #FFFFFF none;" name="map" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="100%"></iframe>
+            </div>
+            <div class="col-xs-6">
+                <p><span style="font-weight:600; color:#0b64b7;">26,610 people</span> ran a cumulative <span style ="font-weight:600; color:#0b64b7;">697,182 miles</span> in the 2015 Boston Marathon April 21. <br><br>With about <span style="font-weight:600; color:#0b64b7;">148,800 tweets</span> using #BostonMarathon on race day, social media also saw high mileage by people around the world.
+                </p>
+            </div>        </div>
+        <div class="row">            
+            <div class="col-xs-9">
+                
+            </div>
+            <div class="col-xs-3">
+                <h3>Tweets</h3>
+                <iframe src="http://walkerkd.webfactional.com/j586-project-4/twitter" style="border:0px #FFFFFF none;" name="twitter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%"></iframe>
+                <iframe src="http://walkerkd.webfactional.com/j586-project-4/instagram/instagram.html" style="border:0px #FFFFFF none;" name="instagram" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%"></iframe>
             </div>
         </div>
-        <div class="row">
-            <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 25%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://walkerkd.webfactional.com/j586-project-4/twitter/' style='border:0'></iframe></div>
-        </div>
-    </div>    
+    </div>
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
