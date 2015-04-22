@@ -11,6 +11,7 @@ p, h1, h2, h3, h4, h5, h6{
 p{
     margin-top:20px;
     font-size:20px;
+    margin-bottom:-10px;
 }
 
 h1{
@@ -25,14 +26,18 @@ h2{
     font-size: 29px;
     font-weight: 700;
     padding-left:630px;
-    color:#006ec7
+    color:#0b64b7;
 }
 
 h3{
     font-size:20px;
     font-weight:700;
     color:#0b64b7;
+    padding-bottom:2px;
+    border-bottom:2px solid black;
 }
+
+
 
 .container{
     padding-left:60px;
@@ -62,6 +67,11 @@ h3{
 .insta-pictures{
     width:50px;
     
+}
+
+twitter-side{
+    border-style: solid;
+    border-color: black;
 }
 
 

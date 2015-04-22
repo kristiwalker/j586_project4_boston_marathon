@@ -1,0 +1,39 @@
+.profile-image{
+    float:left;
+}
+
+
+.name{
+    font-weight:700;
+    float:left;
+    font-family:source sans pro;
+    margin-top:-20px;
+    padding-left:10px;
+}
+
+.handle{
+    font-family:source sans pro;
+    float:left;
+    font-weight:500;
+    margin-top:-20px;
+    padding-left:10px;
+    margin-bottom:3px;
+}
+
+.when{
+    font-family:source sans pro;
+    font-weight:400;
+    float:left;
+    padding-left:62px;
+    margin-top:-20px;
+}
+
+.tweet{
+    font-family:source sans pro;
+    padding-left:62px;
+    margin-top:-20px;
+}
+
+.tweet a{
+    color: #0b64b7;
+}

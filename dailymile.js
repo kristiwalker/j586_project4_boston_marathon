@@ -10,7 +10,7 @@
 						
 $(function() {
 	
-	var apiurl = "api.dailymile.com/entries/nearby/-71.52208000000002,42.22844"
+	var apiurl = "api.dailymile.com/entries/nearby/-71.52208000000002,42.22844.json"
 	var access_token = location.hash.split('=')[1];
 	var html = ""
 	
