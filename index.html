@@ -16,9 +16,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+    <link href="js/accordian-3/jquery-ui.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/up-button.css"> <!-- Gem style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
     <link href="css/styles.css" rel="stylesheet">
-        
+    
+    
   </head>
   <body>
     <div class="container-fluid">
@@ -31,27 +35,68 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 map">
-                <iframe src="http://walkerkd.webfactional.com/j586-project-4/map/marathon-map.html" style="border:0px #FFFFFF none;" name="map" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="100%"></iframe>
-            </div>
-            <div class="col-xs-6">
-                <p>What goes into a marathon?</p>
-                <p>On April 21,<span style="font-weight:600; color:#0b64b7;">26,610 people</span> ran a cumulative <span style ="font-weight:600; color:#0b64b7;">697,182 miles</span> in the 2015 Boston Marathon. </p>
-                <p>With about <span style="font-weight:600; color:#0b64b7;">148,800 tweets</span> using #BostonMarathon on race day, social media also saw high mileage by people around the world.
+            <div class="col-xs-12 col-sm-6 intro">
+                <p>On April 21, almost 30,000 people ran a cumulative 697,182 miles in the 2015 Boston Marathon. </p>
+                <p>With thousands of tweets</span> using #BostonMarathon on race day, social media also saw high mileage.
                 </p>
                 <p>Together, social media users illustrated all that the race means to them them through photos, infographics, links and 140 characters.</p>
-            </div>        </div>
-        <div class="row">            
-            <div class="col-xs-3">
-                <h3 class="twitter-side">Live Tweets</h3>
-                    <iframe src="http://walkerkd.webfactional.com/j586-project-4/twitter" style="border:0px #FFFFFF none;" name="twitter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%"></iframe>
-                <h3 class="twitter-side">Instagram Feed</h3>
-                    <iframe src="http://walkerkd.webfactional.com/j586-project-4/instagram/instagram.html" style="border:2px #FFFFFF none;" name="instagram" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%"></iframe>
-                </div>
             </div>
-            <div class="hidden-xs col-xs-9"></div>
+            <div class="col-xs-12 col-sm-6 map">
+                <iframe src="http://walkerkd.webfactional.com/j586-project-4/map/marathon-map.html" style="border:0px #FFFFFF none;" name="map" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="100%"></iframe>
+            </div>
         </div>
-    </div>
+        <div class="row social-sections">            
+            <!-- Tabs -->
+            <div class="col-xs-12 col-sm-9" id="tabs">
+                    <ul>
+                            <li><a href="#tabs-1">Preparing</a></li>
+                            <li><a href="#tabs-2">Participating</a></li>
+                            <li><a href="#tabs-3">Celebrating</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <div class="storify"><iframe src="http://walkerkd.webfactional.com/j586-project-4/storify/prep.php" style="border:0px #FFFFFF none;" name="storify" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="12450px" width="100%" vertical-align="left"></iframe>
+                        </div>
+                    </div>
+                    <div id="tabs-2">
+                        <div class="storify"><iframe src="http://walkerkd.webfactional.com/j586-project-4/storify/participate.php" style="border:0px #FFFFFF none;" name="storify" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="9360px" width="100%" vertical-align="left"></iframe>
+                        </div>
+                    </div>
+                    <div id="tabs-3">
+                        <div class="storify"><iframe src="http://walkerkd.webfactional.com/j586-project-4/storify/celebrate.php" style="border:0px #FFFFFF none;" name="storify" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="5650px" width="100%" vertical-align="left"></iframe>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 live-sections">
+                <h4 class="side-titles">Live Tweets</h4>
+                    <iframe class="social-border" src="http://walkerkd.webfactional.com/j586-project-4/twitter" style="border:0px #FFFFFF none;" name="twitter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%"></iframe>
+                <hr class="hr-twitter"s>
+                <h4 class="side-titles">Instagram Feed</h4>
+                    <iframe class="social-border" src="instagram/instagram.html" style="border:2px #FFFFFF none;" name="instagram" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="100%"></iframe>
+            </div>
+            
+            
+
+        </div>
+            <script src="js/accordian-3/external/jquery/jquery.js"></script>
+            <script src="js/accordian-3/jquery-ui.js"></script>
+            <script>
+            
+            $( "#tabs" ).tabs();
+        
+            // Hover states on the static widgets
+            $( "#dialog-link, #icons li" ).hover(
+                    function() {
+                            $( this ).addClass( "ui-state-hover" );
+                    },
+                    function() {
+                            $( this ).removeClass( "ui-state-hover" );
+                    }
+            );            
+            </script>
+        
+        <a href="#0" class="cd-top">Top</a>
+
+<script src="js/main.js"></script> <!-- Gem jQuery -->
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
